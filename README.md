@@ -2,6 +2,6 @@
 
 Logos and artwork of the terranix project.
 
-- [logo.svg](./logo.svg):
-    created_by: [Gerald Wagner](https://de.linkedin.com/in/gerald-wagner-graphic-programming)
-    licensed: MIT
+* file: [logo.svg](./logo.svg)<br>
+  created_by: [Gerald Wagner](https://de.linkedin.com/in/gerald-wagner-graphic-programming)<br>
+  licensed: [MIT](./LICENSE)<br>
