@@ -9,16 +9,10 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        convert = "${pkgs.imagemagick}/bin/convert";
       in {
         # nix run ".#favicon"
-        apps.favicon =
-          let
-            convert = "${pkgs.imagemagick}/bin/convert";
-            createIco = size: pkgs.writers.writeBash "create-size" ''
-              ${convert} ../logo.svg -resize ${size}x${size} -transparent white favicon-${size}.png
-            '';
-          in
-          {
+        apps.favicon = {
           type = "app";
           program = toString (pkgs.writers.writeBash "favicon" ''
             cd terranix-logo-favicon
